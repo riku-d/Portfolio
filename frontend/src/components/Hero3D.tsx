@@ -1,6 +1,6 @@
-import React, { useRef, useMemo, useEffect, useState } from "react"
+import  { useRef, useMemo, useEffect, useState } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
-import { OrbitControls, Text, MeshDistortMaterial, Environment, useTexture } from "@react-three/drei"
+import { OrbitControls, MeshDistortMaterial, Environment, useTexture } from "@react-three/drei"
 import { Mesh, Vector3 } from "three"
 
 // Detect if device is mobile
@@ -99,30 +99,30 @@ const ImageElement = ({  position, mobile }: { position: [number, number, number
   )
 }
 
-const TextElement = ({ position, text }: { position: [number, number, number]; text: string }) => {
-  const textRef = useRef<Mesh>(null)
+// const TextElement = ({ position, text }: { position: [number, number, number]; text: string }) => {
+//   const textRef = useRef<Mesh>(null)
 
-  useFrame((state) => {
-    if (textRef.current) {
-      textRef.current.lookAt(state.camera.position)
-      textRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime) * 0.1
-    }
-  })
+//   useFrame((state) => {
+//     if (textRef.current) {
+//       textRef.current.lookAt(state.camera.position)
+//       textRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime) * 0.1
+//     }
+//   })
 
-  return (
-    <Text
-      ref={textRef}
-      position={position}
-      fontSize={0.5}
-      color="#ffffff"
-      font="/fonts/Inter-Bold.woff" // Place in public/fonts, else fallback
-      anchorX="center"
-      anchorY="middle"
-    >
-      {text}
-    </Text>
-  )
-}
+//   return (
+//     <Text
+//       ref={textRef}
+//       position={position}
+//       fontSize={0.5}
+//       color="#ffffff"
+//       font="/fonts/Inter-Bold.woff" // Place in public/fonts, else fallback
+//       anchorX="center"
+//       anchorY="middle"
+//     >
+//       {text}
+//     </Text>
+//   )
+// }
 
 const FloatingDataNode = ({ position, color }: { position: [number, number, number]; color: string }) => {
   const meshRef = useRef<Mesh>(null)
