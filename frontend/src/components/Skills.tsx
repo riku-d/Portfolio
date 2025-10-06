@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Code, BarChart3, Cloud, GitBranch, Shield } from 'lucide-react'
-import { FadeIn, StaggerContainer, StaggerItem } from './ScrollAnimations'
+import { Code, BarChart3, Shield } from 'lucide-react'
+import { FadeIn } from './ScrollAnimations'
 
 interface Skill {
   name: string
@@ -139,7 +139,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Additional info section */}
-        <StaggerContainer>
+        {/* <StaggerContainer>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -180,7 +180,7 @@ const Skills: React.FC = () => {
               </div>
             </div>
           </motion.div>
-        </StaggerContainer>
+        </StaggerContainer> */}
       </div>
     </section>
   )
