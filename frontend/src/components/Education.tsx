@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { GraduationCap, Award, BookOpen, Users } from 'lucide-react'
@@ -47,33 +47,7 @@ const Education = () => {
     }
   ]
 
-  const achievements = [
-    {
-      title: null,
-      description: null,
-      icon: null
-    }
-    // {
-    //   title: 'Dean\'s List',
-    //   description: 'Maintained high academic performance throughout the program',
-    //   icon: Award
-    // },
-    // {
-    //   title: 'Hackathon Winner',
-    //   description: 'First place in university AI/ML hackathon 2023',
-    //   icon: Users
-    // },
-    // {
-    //   title: 'Research Publication',
-    //   description: 'Co-authored paper on "Predictive Analytics in Healthcare"',
-    //   icon: BookOpen
-    // },
-    // {
-    //   title: 'Student Mentor',
-    //   description: 'Mentored junior students in data science projects',
-    //   icon: Users
-    // }
-  ]
+ 
 
   return (
     <section id="education" className="section-padding">

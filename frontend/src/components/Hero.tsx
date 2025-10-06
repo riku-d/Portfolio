@@ -10,7 +10,7 @@ const Hero3D = React.lazy(() => import("./Hero3D"));
 const Hero = () => {
   const [typingText, setTypingText] = useState('');
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [, setIsMobile] = useState(false);
 
   const taglines = [
     'Data Scientist',
